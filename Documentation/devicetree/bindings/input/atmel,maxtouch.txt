@@ -1,8 +1,12 @@
 Atmel maXTouch touchscreen/touchpad
 
 Required properties:
-- compatible:
+- compatible: Must be one of the following
+    atmel,qt602240_ts
+    atmel,atmel_mxt_ts
+    atmel,atmel_mxt_tp
     atmel,maxtouch
+    atmel,mXT224
 
 - reg: The I2C address of the device
 
