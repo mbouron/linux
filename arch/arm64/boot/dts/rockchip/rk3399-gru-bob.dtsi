@@ -122,17 +122,10 @@
 
 	cr50@0 {
 		compatible = "google,cr50";
+
 		reg = <0>;
-		spi-max-frequency = <800000>; // TODO: review later
+		spi-max-frequency = <800000>;
 	};
-};
-
-&target {
-	temperature = <70000>;
-};
-
-&threshold {
-	temperature = <65000>;
 };
 
 &mvl_wifi {

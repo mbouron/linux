@@ -54,9 +54,3 @@
 		     "google,bob-rev5", "google,bob-rev4",
 		     "google,bob", "google,gru", "rockchip,rk3399";
 };
-
-&dmc {
-	rockchip,pd_idle_dis_freq = <800000000>;
-	rockchip,sr_idle_dis_freq = <800000000>;
-	rockchip,sr_mc_gate_idle_dis_freq = <800000000>;
-};

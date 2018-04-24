@@ -52,25 +52,6 @@
 };
 
 /*
- * HACK: Disabling the ddr auto power down on bob board, since the caused by
- * the ripple of hardware.
- */
-&dmc {
-	rockchip,pd_idle_dis_freq = <200000000>;
-	rockchip,sr_idle_dis_freq = <200000000>;
-	rockchip,sr_mc_gate_idle_dis_freq = <200000000>;
-	rockchip,standby_idle_dis_freq = <200000000>;
-};
-
-&dmc_opp_table {
-	opp02 {
-		opp-suspend;
-	};
-
-	/delete-node/ opp03;
-};
-
-/*
  * HACK for -rev2~3 to bump up voltage
  *
 　* There's some extra voltage drop on early revs of bob due to board layout

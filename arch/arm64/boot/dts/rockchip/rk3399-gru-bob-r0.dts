@@ -51,25 +51,6 @@
 		     "google,bob", "google,gru", "rockchip,rk3399";
 };
 
-/*
- * HACK: Disabling the ddr auto power down on bob board, since the caused by
- * the ripple of hardware.
- */
-&dmc {
-	rockchip,pd_idle_dis_freq = <200000000>;
-	rockchip,sr_idle_dis_freq = <200000000>;
-	rockchip,sr_mc_gate_idle_dis_freq = <200000000>;
-	rockchip,standby_idle_dis_freq = <200000000>;
-};
-
-&dmc_opp_table {
-	opp02 {
-		opp-suspend;
-	};
-
-	/delete-node/ opp03;
-};
-
 &pp3000_sd_slot {
 	/delete-property/ enable-active-high;
 	gpio = <&gpio4 29 GPIO_ACTIVE_LOW>;
